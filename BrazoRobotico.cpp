@@ -1,21 +1,19 @@
 #include "BrazoRobotico.h"
 
 BrazoRobotico::BrazoRobotico(double x, double y, double z, bool sujetando)
-	:x(x), y(y), z(z), sujetando(sujetando) {}
+    : x(x), y(y), z(z), sujetando(sujetando) {}
 
-double BrazoRobotico::getX() {return x;}
-double BrazoRobotico::getY() {return y;}
-double BrazoRobotico::getX() {return z;}
-bool BrazoRobotico::estaSujetando() {return sujetando;}
+double BrazoRobotico::getX() const { return x; }
+double BrazoRobotico::getY() const { return y; }
+double BrazoRobotico::getZ() const { return z; }
+bool BrazoRobotico::getSujetando() const { return sujetando; }
 
-void BrazoRobotico::mover(double nuevoX, double nuevoY, double nuevoZ) {
-	x = nuevoX;
-	y = nuevoY;
-	z = nuevoZ;
+void BrazoRobotico::coger() { sujetando = true; }
+void BrazoRobotico::soltar() { sujetando = false; }
+
+void BrazoRobotico::mover(double nx, double ny, double nz) {
+    x = nx;
+    y = ny;
+    z = nz;
 }
-void BrazoRobotico::coger() {
-	sujetando = true; 
-}
-void BrazoRobotico::soltar() {
-	sujetando = false;
-}
+

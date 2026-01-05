@@ -8,11 +8,11 @@ private:
 	double z;
 	bool sujetando;
 public:
-	BrazoRobotico(double x = 0.0, double y = 0.0. double z = 0.0, bool sujetando = false);
-	double getX();
-	double getY();
-	double getZ();
-	bool getSujetando();
+	BrazoRobotico(double x = 0.0, double y = 0.0, double z = 0.0, bool sujetando = false);
+	double getX() const;
+	double getY() const;
+	double getZ() const;
+	bool getSujetando() const;
 
 	void coger();
 	void soltar();

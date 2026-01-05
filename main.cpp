@@ -17,7 +17,7 @@ int main() {
 
     brazo.coger();
     std::cout << "Sujetando objeto: "
-              << (brazo.estaSujetando() ? "SI" : "NO") << "\n";
+              << (brazo.getSujetando() ? "SI" : "NO") << "\n";
 
     return 0;
 }
